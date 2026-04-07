@@ -1,0 +1,55 @@
+version: "3.1"
+
+nlu:
+- intent: saudacao
+  examples: |
+    - Oi
+    - Olá
+    - Bom dia
+    - Boa tarde
+    - Boa noite
+    - Com licença
+    - Tudo bem?
+    - Oi, tudo bem?
+
+- intent: buscar_livro_por_titulo
+  examples: |
+    - quero um livro chamado [Dom Casmurro](titulo)
+    - procuro por [O Pequeno Príncipe](titulo)
+    - procuro pelo [1984](titulo)
+    - estou procurando o livro [A Metamorfose](titulo)
+    - vocês tem o [Os Miseráveis](titulo)?
+
+- intent: buscar_livro_por_autor
+  examples: |
+    - quero livros de [Machado de Assis](autor)
+    - me mostre as obras de [Franz Kafka](autor)
+    - quais os livros da [Clarice Lispecor](autor)
+    - me mostre obras escritas por [J. K. Rowling](autor)
+    - quais os livros do [Nicolau Maquiavel](autor)
+    - [Nietzsche]
+  
+- intent: buscar_livro_por_assunto
+  examples: |
+    - quero livros de [terror](assunto)
+    - me mostre as obras de [filosofia](assunto)
+    - quais os livros de [programação](assunto) você tem?
+    - busco livros de [romance](assunto)
+    - qual livro de [politica](assunto) você me indica
+  
+- intent: despedida
+  examples: |
+    - tchau
+    - obrigado pela atenção
+    - até mais
+    - até a próxima
+    - ok, obrigado
+    - obrigado
+    - valeu
+
+- intent: bot_challenge
+  examples: |
+    - você é um robô?
+    - você é humano?
+    - estou falando com um bot?
+    - quem é você?

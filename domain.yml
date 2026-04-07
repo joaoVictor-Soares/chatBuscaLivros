@@ -1,0 +1,61 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - buscar_livro_por_titulo
+  - buscar_livro_por_autor
+  - buscar_livro_por_assunto
+  - despedida
+  - bot_challenge
+
+entities:
+  - titulo
+  - autor
+  - assunto
+
+slots:
+  titulo:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: titulo
+  
+  autor:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: autor
+  
+  assunto:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: assunto
+
+responses:
+  utter_saudacao:
+  - text: "Olá, qual livro você gostaria de levar hoje?"
+
+  utter_despedida:
+  - text: "Foi um prazer te ajudar a ler mais!"
+
+  utter_perguntar_titulo:
+  - text: "Qual o título do livro que você procura?"
+
+  utter_perguntar_autor:
+  - text: "De quem é o livro que você procura?"
+
+  utter_perguntar_assunto:
+  - text: "Sobre qual assunto o livro que você procura trata?"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_buscar_por_titulo
+  - action_buscar_por_autor
+  - action_buscar_por_assunto
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

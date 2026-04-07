@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: saudação
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+
+- rule: chatbot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida
