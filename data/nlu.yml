@@ -19,16 +19,25 @@ nlu:
     - procuro pelo [1984](titulo)
     - estou procurando o livro [A Metamorfose](titulo)
     - vocês tem o [Os Miseráveis](titulo)?
+    - você possui o exemplar de [Capitães da Areia](titulo)?
+    - encontre o livro [Orgulho e Preconceito](titulo) para mim
+    - tem disponível o [Sapiens](titulo)?
+    - gostaria de ler [O Alquimista](titulo)
+    - pesquise o título [Cem Anos de Solidão](titulo)
 
 - intent: buscar_livro_por_autor
   examples: |
     - quero livros de [Machado de Assis](autor)
     - me mostre as obras de [Franz Kafka](autor)
-    - quais os livros da [Clarice Lispecor](autor)
+    - quais os livros da [Clarice Lispector](autor)
     - me mostre obras escritas por [J. K. Rowling](autor)
     - quais os livros do [Nicolau Maquiavel](autor)
-    - [Nietzsche]
-  
+    - [Nietzsche](autor)
+    - o que você tem do [George Orwell](autor)?
+    - procure por publicações de [Agatha Christie](autor)
+    - quero ver tudo do [Stephen King](autor)
+    - quais títulos da [Virginia Woolf](autor) estão no catálogo?
+
 - intent: buscar_livro_por_assunto
   examples: |
     - quero livros de [terror](assunto)
@@ -36,6 +45,11 @@ nlu:
     - quais os livros de [programação](assunto) você tem?
     - busco livros de [romance](assunto)
     - qual livro de [politica](assunto) você me indica
+    - quero livros de [história](assunto)
+    - me recomende algo sobre [psicologia](assunto)
+    - você tem livros de [biografias](assunto)?
+    - estou interessado em [ficção científica](assunto)
+    - quais as opções de [gastronomia](assunto)?
   
 - intent: despedida
   examples: |
