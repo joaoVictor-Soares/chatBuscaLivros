@@ -13,7 +13,7 @@ class ActionBuscarPorTitulo(Action):
             dispatcher.utter_message(text="Qual é o livro que você procura?")
             return []
 
-        url = f"https://openlibrary.org/search.json?title={titulo}"
+        url = f"https://openlibrary.org/search.json?title={titulo}&language=por"
         response = requests.get(url)
         data = response.json()
 
@@ -35,7 +35,7 @@ class ActionBuscarPorAutor(Action):
             dispatcher.utter_message(text="Qual autor você quer buscar?")
             return []
 
-        url = f"https://openlibrary.org/search.json?author={autor}"
+        url = f"https://openlibrary.org/search.json?author={autor}&language=por"
         response = requests.get(url)
         data = response.json()
 
@@ -58,7 +58,7 @@ class ActionBuscarPorAssunto(Action):
             dispatcher.utter_message(text="Sobre qual assunto você gostaria de ler?")
             return []
 
-        url = f"https://openlibrary.org/search.json?subject={assunto}"
+        url = f"https://openlibrary.org/search.json?subject={assunto}&language=por"
         
         try:
             response = requests.get(url)

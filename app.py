@@ -43,7 +43,7 @@ if prompt := st.chat_input('Digite sua mensagem'):
         response = requests.post(
             RASA_URL,
             json={'sender': st.session_state.sender_id, 'message': prompt},
-            timeout=5 # espera a resposta por no máximo 5 segundos
+            timeout=20 # espera a resposta por no máximo 5 segundos
         )
 
         # converte a resposta do servidor em uma lista de objetos python
